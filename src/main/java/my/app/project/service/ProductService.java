@@ -5,6 +5,8 @@ import my.app.project.repo.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ProductService {
     @Autowired
@@ -20,5 +22,7 @@ public class ProductService {
 
     }
 
-
+    public List<Product> getAllProduct() {
+        return repository.findAll();
+    }
 }
