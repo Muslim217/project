@@ -11,7 +11,7 @@ public class Seller {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    @OneToMany(cascade = CascadeType.PERSIST)
+    @OneToMany
     private List<Product> assortment;
 
 }
