@@ -11,11 +11,10 @@ public class Seller {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    //Снизу поля добавлены недавно
     private String number;
     private String mail;
     private String nameOfCompany;
-    private String saleArea;//Область продажи, то есть, там, где продавец продает товар.
+    private String saleArea;//Область продажи
     @OneToMany
     private List<Product> assortment;
 
