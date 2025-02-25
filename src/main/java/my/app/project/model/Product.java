@@ -15,4 +15,10 @@ public class Product {
     private String name;
     private String description;
     private Double price;
+    //Тут должен быть image
+    private String measure;
+    private String quantity;// кол-во
+    private String CountryOfOrigin;// страна производитель
+    // я не стал добавлять поле еще одно поле характеристики
+    // у нас и так есть description
 }
