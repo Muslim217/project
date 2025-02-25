@@ -13,5 +13,5 @@ public class Seller {
     private String name;
     @OneToMany
     private List<Product> assortment;
-
+ //Рамзан лох
 }
