@@ -3,7 +3,6 @@ package my.app.project.controller;
 
 import my.app.project.model.Product;
 import my.app.project.model.Seller;
-import my.app.project.service.ProductService;
 import my.app.project.service.SellerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -35,6 +34,5 @@ public class SellerController {
             @RequestBody Product product) {
         service.addProductInSeller(id, product);
         return ResponseEntity.status(HttpStatus.CREATED).body(product);
-
     }
 }
