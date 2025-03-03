@@ -22,4 +22,21 @@ public class ImageService {
         image.setBytes(file.getBytes());
         repository.save(image);
     }
+
+    public byte[] get(long id){
+        Image image = repository.findById(id).get();
+        return image.getBytes();
+    }
+
+    public void delete(long id){
+        Image image = repository.findById(id).get();
+        repository.delete(image);
+    }
+
+    public void patch(long id, MultipartFile file) throws IOException {
+        Image image = repository.findById(id).get();
+        image.setBytes(file.getBytes());
+        image.setFileName(file.getOriginalFilename());
+        repository.save(image);
+    }
 }
