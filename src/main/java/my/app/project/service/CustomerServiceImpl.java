@@ -3,6 +3,7 @@ package my.app.project.service;
 import my.app.project.model.Customer;
 import my.app.project.model.Product;
 import my.app.project.repo.CustomerRepository;
+import my.app.project.repo.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -32,19 +33,5 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public void deleteCustomer(Long id) {
         repo.deleteById(id);
-    }
-
-    @Override
-    public void addProductToCart(Long cust_id, Product prod, int quantity) {
-        Customer customer = repo.findById(cust_id).get();
-        HashMap<Product, Integer> cart = customer.getCart();
-        cart.put(prod, quantity);
-        customer.setCart(cart);
-        repo.save(customer);
-    }
-
-    @Override
-    public void deleteProductFromCart(Long cust_id, Long prod_id, int quantity) {
-
     }
 }

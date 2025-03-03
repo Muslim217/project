@@ -10,6 +10,4 @@ public interface CustomerService {
     public Customer getCustomer(Long id);
     public List<Customer> getAllCustomers();
     public void deleteCustomer(Long id);
-    public void addProductToCart(Long cust_id, Product prod , int quantity);
-    public void deleteProductFromCart(Long cust_id, Long prod_id, int quantity);
 }

@@ -5,7 +5,6 @@ import lombok.Data;
 
 @Data
 @Entity
-@Embeddable
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
