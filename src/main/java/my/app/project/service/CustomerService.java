@@ -1,8 +1,6 @@
 package my.app.project.service;
 
 import my.app.project.model.Customer;
-import my.app.project.model.Product;
-
 import java.util.List;
 
 public interface CustomerService {

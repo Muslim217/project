@@ -14,7 +14,7 @@ import java.util.List;
 @RequestMapping("/customer")
 public class CustomerController {
     @Autowired
-    CustomerServiceImpl service;
+    private CustomerServiceImpl service;
 
     @PostMapping
     public ResponseEntity<Customer> addCustomer(@RequestBody Customer customer) {
@@ -22,7 +22,7 @@ public class CustomerController {
         return ResponseEntity.status(HttpStatus.CREATED).body(customer);
     }
 
-    @GetMapping
+    @GetMapping("{id}")
     public ResponseEntity<Customer> getCustomer(@PathVariable Long id) {
         return new ResponseEntity<>(service.getCustomer(id), HttpStatusCode.valueOf(200));
     }
