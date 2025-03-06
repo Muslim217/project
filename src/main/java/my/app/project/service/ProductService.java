@@ -1,5 +1,6 @@
 package my.app.project.service;
 
+import my.app.project.model.Image;
 import my.app.project.model.Product;
 import my.app.project.repo.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,8 +19,6 @@ public class ProductService {
 
     public void saveProduct(Product product) {
         repository.save(product);
-
-
     }
 
     public List<Product> getAllProduct() {

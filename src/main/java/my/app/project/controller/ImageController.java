@@ -64,10 +64,6 @@ public class ImageController {
 
     @PatchMapping("{id}")
     public ResponseEntity<String> patchImageById(@PathVariable long id, @RequestParam("image") MultipartFile file){
-//        if(file.isEmpty()){
-//            return new ResponseEntity<>("Новый файл пустой", HttpStatus.NO_CONTENT);
-//        }
-
         try {
             service.patch(id, file);
             return new ResponseEntity<>("Изменения приняты", HttpStatus.OK);

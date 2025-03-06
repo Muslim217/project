@@ -15,4 +15,6 @@ public class Image {
     @Lob
     private byte[] bytes;
 
+    @ManyToOne
+    private Product product;
 }
