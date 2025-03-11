@@ -1,5 +1,6 @@
 package my.app.project.controller;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import my.app.project.model.Image;
 import my.app.project.model.Product;
 import my.app.project.service.ImageService;
@@ -33,8 +34,20 @@ public class ProductController {
     }
 
     @PostMapping
-    public void saveProduct(@RequestBody Product product) {
-        productService.saveProduct(product);
+    public ResponseEntity<String> saveProduct(@RequestParam("product") String productJson, @RequestParam("image") MultipartFile file) {
+        if(file.isEmpty()){
+            return new ResponseEntity<>("Запрос пустой", HttpStatus.NO_CONTENT);
+        }
 
+        try {
+            ObjectMapper mapper = new ObjectMapper();
+            Product product = mapper.readValue(productJson, Product.class);
+
+            productService.saveProduct(product);
+            imageService.save(file);
+            return new ResponseEntity<>("Все круто записалось", HttpStatus.CREATED);
+        } catch (IOException e) {
+            return new ResponseEntity<>("Ошибка записи в бд", HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 }
