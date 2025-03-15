@@ -3,6 +3,8 @@ package my.app.project.model;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.List;
+
 @Entity
 @Data
 public class Customer {
@@ -15,4 +17,6 @@ public class Customer {
     private String state;
     private String email;
     private String phone;
+    @OneToMany(mappedBy = "customer")
+    private List<Cart> carts;
 }
