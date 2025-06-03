@@ -1,10 +1,9 @@
 package my.app.project.repo;
 
-import my.app.project.model.Customer;
+import my.app.project.model.Order;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface CustomerRepository extends JpaRepository<Customer, Long>{
-
+public interface OrderRepository extends JpaRepository<Order, Long> {
 }
