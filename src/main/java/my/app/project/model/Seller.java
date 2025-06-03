@@ -3,10 +3,8 @@ package my.app.project.model;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.lang.reflect.Array;
+
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 @Data
 @Entity
 @Table(name = "sellers")
