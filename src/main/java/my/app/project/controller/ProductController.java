@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
@@ -16,9 +15,10 @@ public class ProductController {
     private ProductService service;
 
     @GetMapping("{idP}")
-    public Product getById(@PathVariable long idP) {
-        return service.getById(idP);
+    public Product getById(@PathVariable long id) {
+        return service.getById(id);
     }
+
     @GetMapping
     public ResponseEntity<List<Product>> getAllProduct() {
         return new ResponseEntity(service.getAllProduct(), HttpStatus.OK);
