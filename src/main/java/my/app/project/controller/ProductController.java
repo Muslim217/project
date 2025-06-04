@@ -1,7 +1,7 @@
 package my.app.project.controller;
 
 import my.app.project.model.Product;
-import my.app.project.service.ProductService;
+import my.app.project.service.impl.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

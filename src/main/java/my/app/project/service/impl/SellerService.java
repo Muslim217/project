@@ -1,7 +1,6 @@
-package my.app.project.service;
+package my.app.project.service.impl;
 
 import jakarta.transaction.Transactional;
-import my.app.project.model.Order;
 import my.app.project.model.Product;
 import my.app.project.model.Seller;
 import my.app.project.repo.SellerRepository;

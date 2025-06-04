@@ -1,13 +1,10 @@
-package my.app.project.service;
+package my.app.project.service.impl;
 
-import my.app.project.enumeration.OrderStatus;
 import my.app.project.model.Customer;
-import my.app.project.model.Order;
 import my.app.project.model.Product;
 import my.app.project.repo.CustomerRepository;
-import my.app.project.repo.OrderRepository;
+import my.app.project.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
