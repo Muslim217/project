@@ -1,15 +1,14 @@
-package my.app.project.service;
+package my.app.project.service.impl;
 
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import my.app.project.model.Cart;
-import my.app.project.model.Product;
 import my.app.project.repo.CartRepository;
+import my.app.project.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
-import java.util.Map;
 
 @Service
 public class CartService {

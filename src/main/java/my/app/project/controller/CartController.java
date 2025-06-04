@@ -1,19 +1,14 @@
 package my.app.project.controller;
 
-import jakarta.persistence.EntityNotFoundException;
 import my.app.project.model.Cart;
-import my.app.project.model.Product;
-import my.app.project.service.CartService;
+import my.app.project.service.impl.CartService;
 import my.app.project.service.CustomerService;
-import my.app.project.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
-import java.util.Map;
-import java.util.TreeMap;
 
 @RestController
 @RequestMapping("/cart")

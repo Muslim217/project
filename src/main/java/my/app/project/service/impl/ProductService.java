@@ -1,4 +1,4 @@
-package my.app.project.service;
+package my.app.project.service.impl;
 
 import my.app.project.model.Product;
 import my.app.project.repo.ProductRepository;

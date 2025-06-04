@@ -1,7 +1,7 @@
 package my.app.project.controller;
 
 import my.app.project.model.Customer;
-import my.app.project.service.CustomerServiceImpl;
+import my.app.project.service.impl.CustomerServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;

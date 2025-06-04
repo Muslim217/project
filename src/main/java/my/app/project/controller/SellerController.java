@@ -3,7 +3,7 @@ package my.app.project.controller;
 
 import my.app.project.model.Product;
 import my.app.project.model.Seller;
-import my.app.project.service.SellerService;
+import my.app.project.service.impl.SellerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
