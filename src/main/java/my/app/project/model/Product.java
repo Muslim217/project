@@ -16,5 +16,4 @@ public class Product {
     private Integer quantity;
     @ManyToOne
     private Seller seller;
-
 }
